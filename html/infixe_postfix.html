@@ -104,9 +104,9 @@
             </a>
           </li>
           <li class="menu-item">
-            <a href="potfix_infixe.html" class="menu-link">
+            <a href="infixe_postscript.html" class="menu-link">
               <i class="menu-icon tf-icons bx bx-calculator"></i>
-              <div data-i18n="Analytics">postfixe en infixe </div>
+              <div data-i18n="Analytics">infixe postscript</div>
             </a>
           </li>
         <ul class="menu-inner py-1"></ul>
@@ -177,19 +177,19 @@ L'évaluation d'une expression postfixée est souvent effectuée à l'aide d'une
                     <div class="accordion  mt-0 p-5 pt-3" id="accordionExample">
                       <form>
                         <div class="card mb-4">
-                          <h5 class="card-header">Infix expression</h5>
+                          <h5 class="card-header"> Expression Infix</h5>
                           <div class="card-body">
                             <div>
                               <div class="input-group">
-                                <textarea class="form-control" aria-label="With textarea" placeholder="The expression"rows="4" id="infixe"></textarea>
+                                <textarea class="form-control" aria-label="With textarea" placeholder="L'éxpression"rows="4" id="infixe"></textarea>
                               </div>
                             </div>
                           </div>
-                          <h5 class="card-header">postfixe expression</h5>
+                          <h5 class="card-header"> Expression Postfixe</h5>
                           <div class="card-body">
                             <div>
                               <div class="input-group" >
-                                <textarea class="form-control" aria-label="With textarea " placeholder="The result" rows="4" readonly id="postfixe"></textarea>
+                                <textarea class="form-control" aria-label="With textarea " placeholder="Le résultat" rows="4" readonly id="postfixe"></textarea>
                                 
                               </div>
                             </div>
@@ -240,6 +240,12 @@ L'évaluation d'une expression postfixée est souvent effectuée à l'aide d'une
         });
 
       }
+      document.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13) {
+          infix_topostfixe();
+        }
+      });
+
       
       
     </script>

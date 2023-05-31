@@ -104,9 +104,9 @@
               </a>
             </li>
             <li class="menu-item">
-              <a href="potfix_infixe.html" class="menu-link">
+              <a href="infixe_postscript.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calculator"></i>
-                <div data-i18n="Analytics">postfixe en infixe </div>
+                <div data-i18n="Analytics">infixe postscript</div>
               </a>
             </li>
           <ul class="menu-inner py-1"></ul>
@@ -178,7 +178,7 @@
                     <div class="accordion  mt-0 p-5 pt-3" id="accordionExample">
                       <form>
                         <div class="card mb-4">
-                          <h5 class="card-header">Add function</h5>
+                          <h5 class="card-header">Nouvelle fonction</h5>
                           <div class="card-body">
                             <div>
                               <div class="input-group">
@@ -198,10 +198,10 @@
                         </div>
                         <div class="row mt-3">
                           <div class="d-grid gap-2 col-lg-6 mx-auto">
-                            <button class="btn btn-secondary btn-lg" type="button" onclick="add_function()">Add new function</button>
+                            <button class="btn btn-secondary btn-lg" type="button" onclick="add_function()">Ajouter nouvelle fonction</button>
                           </div>
                           <div class="d-grid gap-2 col-lg-6 mx-auto">
-                            <button class="btn btn-secondary btn-lg" type="button" onclick="edit_functions()">Edit functions</button>
+                            <button class="btn btn-secondary btn-lg" type="button" onclick="edit_functions()">Modifier les fonctions</button>
                           </div>
                         </div>
                       </form>
@@ -243,6 +243,16 @@
         });
 
       }
+      infixe.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13) {
+            add_function();
+        }
+       });
+       postscript.addEventListener('keydown', function(event) {
+        if (event.keyCode === 13) {
+            add_function();
+        }
+       });
       // envoyer infixe en potsfixe
       function edit_functions() {
         eel.open_functions()(function(result) {
@@ -250,6 +260,7 @@
         });
 
       }
+      
     
       
     </script>
