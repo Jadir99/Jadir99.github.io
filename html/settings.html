@@ -154,7 +154,7 @@
                             aria-expanded="true"
                             aria-controls="accordionOne"
                           >
-                          <h4 class="mb-0 text-center">What is infix and postfix expression?</h4>
+                          <h4 class="mb-0 text-center">Qu'est-ce qu'une expression infixe et  postfixe ?</h4>
                           </button>
                         </h2>
 
@@ -164,12 +164,9 @@
                           data-bs-parent="#accordionExample"
                         >
                           <div class="accordion-body display-7">
-                            are you have a problem with setting up functions of  postscript ?? 
-                            <p> for example : you have a function in postscript name is "alc(a,b)" with 
-                            two parameters to calclule  the  9otr cercle but in infixe expression u set 
-                            "9otr(a,b)" and u want in output of postscript "alc(a,b)" easy u have to add your 
-                            function name in infixe expression and his value in postscript expression</p>
-                            example  (exapmle video record !!!!!!)                     
+                            Rencontrez-vous des difficultés pour configurer les fonctions en PostScript ?
+                            <p> 
+                              Par exemple, vous avez une fonction en PostScript appelée "alc(a,b)" avec deux paramètres pour calculer le cercle de rayon. Cependant, dans une expression infixée, vous avez utilisé "9otr(a,b)" et vous souhaitez obtenir en sortie de PostScript "alc(a,b)". Pour y parvenir, il vous suffit d'ajouter le nom de votre fonction dans l'expression infixée et sa valeur dans l'expression PostScript.                  
                           </div>
                         </div>
                       </div>
@@ -237,7 +234,13 @@
   // envoyer infixe en potsfixe
       function add_function() {
         eel.add_function(infixe.value,postscript.value)(function(result) {
-          if(result) alert("succes");
+            if(result) {
+                Swal.fire(
+              'Bon travail!',
+              'Vous enregistrez les fonctions!',
+              'success'
+            )
+          }
           infixe.value="";
           postscript.value="";
         });
@@ -266,6 +269,7 @@
     </script>
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../assets/vendor/libs/popper/popper.js"></script>
     <script src="../assets/vendor/js/bootstrap.js"></script>
